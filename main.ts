@@ -1,0 +1,13 @@
+I2C_LCD1602.i2cLcdInit(63)
+I2C_LCD1602.i2cLcdBacklightOff()
+basic.pause(500)
+I2C_LCD1602.i2cLcdBacklightOn()
+I2C_LCD1602.i2cLcdShowNumber(123, 0, 0)
+I2C_LCD1602.i2cLcdShowString("Hello", 3, 1)
+I2C_LCD1602.i2cLcdOff()
+basic.pause(500)
+I2C_LCD1602.i2cLcdOn()
+basic.forever(function () {
+    I2C_LCD1602.i2cLcdShowNumber(Math.randomRange(0, 10), Math.randomRange(0, 16), Math.randomRange(0, 2))
+    basic.pause(100)
+})
